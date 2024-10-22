@@ -31,11 +31,12 @@ cmake --build acts-build --target install
 
 ACTS needs to be source before each use:
 ```
+source CI/setup_cvmfs_lcg.sh
 source acts-install/bin/this_acts.sh
 source acts-install/python/setup.sh
 ```
 
-Setup can be testied using this tutorial chain example
+Setup can be testied using this tutorial examples if bug contact me: olivier.salin@cern.ch
 ```
 python acts-src/Examples/Scripts/Python/truth_tracking_kalman.py
 python acts-src/Examples/Scripts/Python/truth_tracking_telescope.py
