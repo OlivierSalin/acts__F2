@@ -4,7 +4,7 @@
 #### Clone repo
 ```
 git clone https://github.com/OlivierSalin/acts__F2.git acts-src
-cd acts_Faser2
+cd acts-src
 git submodule update --init
 ```
 #### Install all dependencies if access to cvmfs
