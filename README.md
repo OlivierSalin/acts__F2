@@ -37,7 +37,8 @@ source acts-install/python/setup.sh
 
 Setup can be testied using this tutorial chain example
 ```
-python acts-src/Examples/Scripts/Python/full_chain_odd.py
+python acts-src/Examples/Scripts/Python/truth_tracking_kalman.py
+python acts-src/Examples/Scripts/Python/truth_tracking_telescope.py
 ```
 
 More information can be found in the [Acts documentation](https://acts.readthedocs.io/).
