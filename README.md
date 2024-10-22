@@ -1,4 +1,45 @@
 # Acts Common Tracking Software
+## Step by step instruction:
+
+#### Clone repo
+```
+git clone acts-src
+cd acts_Faser2
+git submodule update --init
+```
+#### Install all dependencies if access to cvmfs
+```
+source CI/setup_cvmfs_lcg.sh
+```
+#### Build
+cmake -B acts-build -S acts-src \
+  -GNinja \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DCMAKE_CXX_STANDARD=17 \
+  -DCMAKE_INSTALL_PREFIX="acts-install" \
+  -DACTS_BUILD_ODD=ON \
+  -DACTS_BUILD_FATRAS=ON \
+  -DACTS_BUILD_FATRAS_GEANT4=ON \
+  -DACTS_BUILD_EXAMPLES_DD4HEP=ON \
+  -DACTS_BUILD_EXAMPLES_GEANT4=ON \
+  -DACTS_BUILD_EXAMPLES_PYTHIA8=ON \
+  -DACTS_BUILD_EXAMPLES_PYTHON_BINDINGS=ON \
+  -DACTS_FORCE_ASSERTIONS=ON \
+  -DACTS_ENABLE_LOG_FAILURE_THRESHOLD=ON
+
+cmake --build acts-build --target install
+```
+
+ACTS needs to be source before each use:
+```
+source acts-install/bin/this_acts.sh
+source acts-install/python/setup.sh
+```
+
+Setup can be testied using this tutorial chain example
+```
+python acts-src/Examples/Scripts/Python/full_chain_odd.py
+```
 
 More information can be found in the [Acts documentation](https://acts.readthedocs.io/).
 
