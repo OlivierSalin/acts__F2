@@ -12,6 +12,7 @@ git submodule update --init
 source CI/setup_cvmfs_lcg.sh
 ```
 #### Build
+```
 cmake -B acts-build -S acts-src \
   -GNinja \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
