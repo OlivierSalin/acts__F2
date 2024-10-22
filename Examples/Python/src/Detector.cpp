@@ -14,8 +14,8 @@
 #include "ActsExamples/GenericDetector/GenericDetector.hpp"
 #include "ActsExamples/TGeoDetector/TGeoDetector.hpp"
 #include "ActsExamples/TelescopeDetector/TelescopeDetector.hpp"
-#include "ActsExamples/F2TelescopeDetector/F2TelescopeDetector.hpp"
-#include "ActsExamples/AlignedTelescopeDetector/AlignedTelescopeDetector.hpp"
+// #include "ActsExamples/F2TelescopeDetector/F2TelescopeDetector.hpp"
+// #include "ActsExamples/AlignedTelescopeDetector/AlignedTelescopeDetector.hpp"
 
 #include <memory>
 
@@ -80,7 +80,7 @@ void addDetector(Context& ctx) {
         .def_readwrite("binValue", &Config::binValue);
   }
 
-  {
+  /*{
     using F2TelescopeDetector = F2Telescope::F2TelescopeDetector;
     using Config = F2TelescopeDetector::Config;
 
@@ -106,9 +106,9 @@ void addDetector(Context& ctx) {
         .def_readwrite("Type_surf", &Config::Type_surf)
         .def_readwrite("binValue", &Config::binValue);
 
-  }
+  }*/
 
-  {
+  /*{
     using AlignedTelescopeDetector = AlignedTelescope::AlignedTelescopeDetector;
     using Config = AlignedTelescopeDetector::Config;
 
@@ -135,7 +135,7 @@ void addDetector(Context& ctx) {
         .def_readwrite("sigmaOutPlane", &Config::sigmaOutPlane)
         .def_readwrite("sigmaOutRot", &Config::sigmaOutRot)
         .def_readwrite("sigmaInRot", &Config::sigmaInRot);
-  }
+  }*/
 
   {
     using AlignedDetector = Contextual::AlignedDetector;
