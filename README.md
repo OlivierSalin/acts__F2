@@ -3,7 +3,7 @@
 
 #### Clone repo
 ```
-git clone acts-src
+git clone https://github.com/OlivierSalin/acts__F2.git acts-src
 cd acts_Faser2
 git submodule update --init
 ```
