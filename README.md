@@ -1,4 +1,6 @@
 # Acts Common Tracking Software
+ACTS version 31.2.0
+
 ## Step by step instruction:
 
 #### Clone repo
